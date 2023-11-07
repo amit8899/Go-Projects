@@ -1,0 +1,16 @@
+go test 
+
+go test -v  //with verbose flag, for full info
+
+go test -v -run methodName //for running single test
+
+go test -bench=. // for benchmarking all
+
+go test -bench=methodName  // for benchmarking single method
+
+go test -cover // for coverage
+
+
+
+
+
