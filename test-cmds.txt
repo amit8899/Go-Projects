@@ -10,6 +10,10 @@ go test -bench=methodName  // for benchmarking single method
 
 go test -cover // for coverage
 
+go test -coverprofile=coverage.out  // for exporting coverage file
+
+go tool cover -html=coverage.out //for viewing html
+
 
 
 

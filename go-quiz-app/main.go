@@ -31,7 +31,7 @@ func main() {
 	//1. input the name of file
 	fName := flag.String("f", "quiz.csv", "path of csv file")
 	//2. set the duration of the timer
-	timer := flag.Int("t", 30, "timer for the quiz")
+	timer := flag.Int("t", 20, "timer for the quiz")
 	flag.Parse()
 	//3. pull the problems from the file (calling our problem puller func)
 	problems, err := problemPuller(*fName)
@@ -79,6 +79,7 @@ func parseProblem(lines [][]string) []problem {
 
 	for i := 0; i < len(lines); i++ {
 		r[i] = problem{q: lines[i][0], a: lines[i][1]}
+		fmt.Println(r[i])
 	}
 	return r
 }
