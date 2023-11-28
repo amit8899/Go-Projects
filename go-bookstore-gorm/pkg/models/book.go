@@ -8,9 +8,12 @@ import (
 
 var db *gorm.DB
 
+/*
+remove gorm.Model and add bookId variable as primary key
+*/
 type Book struct {
 	gorm.Model
-	Name        string `gorm:""json:"name"`
+	Name        string `gorm:"" json:"name"`
 	Author      string `json:"author"`
 	Publication string `json:"publication"`
 }
